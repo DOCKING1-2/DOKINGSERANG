@@ -372,16 +372,19 @@
 
     <script>
         // --- 1. FIREBASE CONFIGURATION ---
-        const firebaseConfig = {
-            apiKey: "AIzaSyA18xOcEdA15vIfatHcNgAx3X_6M7Io1_8",
-            authDomain: "rooms-c1-c2.firebaseapp.com",
-            projectId: "rooms-c1-c2",
-            storageBucket: "rooms-c1-c2.firebasestorage.app",
-            messagingSenderId: "330717741463",
-            appId: "1:330717741463:web:7a91aff257f4774127c4d2",
-            measurementId: "G-TV59EYWY5B",
-            databaseURL: "https://rooms-c1-c2-default-rtdb.asia-southeast1.firebasedatabase.app"
-        };
+// For Firebase JS SDK v7.20.0 and later, measurementId is optional
+// --- 1. FIREBASE CONFIGURATION ---
+const firebaseConfig = {
+  apiKey: "AIzaSyBoEzc7GUSN7muioY29AYIHzi7d9BwBgsw",
+  authDomain: "dokingserang4.firebaseapp.com",
+  databaseURL: "https://dokingserang4-default-rtdb.asia-southeast1.firebasedatabase.app/",
+  projectId: "dokingserang4",
+  storageBucket: "dokingserang4.firebasestorage.app",
+  messagingSenderId: "803211626521",
+  appId: "1:803211626521:web:da43924cb96b2b2408c288",
+  measurementId: "G-NLMWHVX9VJ"
+};
+
             
         firebase.initializeApp(firebaseConfig);
         const database = firebase.database();
@@ -400,8 +403,14 @@
             "10082269": { nama: "PAK SALMAN", jabatan: "Supervisor / Khusus", foto: "salman.png", khusus: true }
         };
 
-        const dataInput = {
-​"ABDULLAH": ["AHMAD HASANUDIN S AP", "SITI MUMTAHANAH", "JUNIADI", "DEVIANA AYUNINGSIH", "ATIH YULIAWATI", "HAMID", "KHOTIBUL UMAM", "DARMA", "MUHDI", "RIJAL", "WIDODO", "YAYAN HERNAYANTI", "ENDANG HAIRIL ANWAR", "IRWAN AGUSTIAN", "ILA NAILA", "TRESNA PERMANA", "SUNARDI", "FERA AGUSTIN", "DINA DAINAH", "NINDIAN DWIGUNA", "SUHA", "JALIS", "SODIKIN", "ENDANG", "AHMAD APENDI", "INDRA", "JAKARI", "HIPNI", "AGUS SALIM", "NINA KHAIRUNISA", "A SADELI", "ROHEDI", "RIDWAN", "LUKMANUL HAKIM", "BETI", "MADHAWI", "NANI MULYANI", "RANTO", "MUHAMAD LINDU", "MAMAN SURYAMAN", "BASRI", "ABDUL SYUKUR", "ADIE LESMANA", "SALIMIN", "MUCHLISIN", "SITI HAWA", "JUITA NENGSIH", "YANTO", "PEBRIAN", "EKA IRMAWATI", "MAMAT", "A SUTISNA", "NATINI", "JUNENGSIH", "JAJA PERMANA", "HERI KUSWANTO", "ANTON", "AMNAH", "AGUS BUDIAWAN", "M RIFAI", "SUTIHAT", "SUHENDRA SALIM", "AMSANAH", "ADE MUKHTAR", "IWAN SETIAWAN"],​"APUD MAHPUDIN": ["KISWANTO", "SUJANA", "AHMAD BAEDOWI", "JOHARIYAH", "KHAMSIN", "ALEX", "MUHAMAD SAHRUL", "AHMAD SOPIAN", "MUTO I", "MALA NOVITA SARI", "ROYANI", "HALIMI", "MAD ZAIDIN", "NORMAN SUANDI", "ARIF MAULANA", "WAHYUDIN", "MAHPUD", "JAMJURI", "AHMAD MAHMUDI", "AMBARI", "IMAS MASTURIAH", "YOGA EKA PRADHITA", "RENDI SUDRAJAT TULLAH", "SUPIANA", "SUTISNA", "MARJUK", "MARIA ULFAH", "JAENI", "ROSLIYANTI", "JEMI HUJAEMI", "NINA MARINA", "MUKRI", "M MAHDI", "SUHAELAH", "SAPRUDIN", "SAEPUDIN", "YOGI MUFTI ALI", "HILMAN", "NURWAHYU", "MUHAMAD IQBAL", "SOMA", "ARIF PATUROHMAN", "MILA ANJANI", "DIAN KHAERANI", "ROSMINI", "JOHAN", "ALI SOBRI", "ROISAH", "MULYANI", "PIAN SEPTIANDI", "EVI HANAPI", "INCE", "SUDRAJAT", "SOPIAH", "NURJEN", "RINDI SALIA", "YOGA PANGESTU", "AHMAD FATONI", "ADE HUSAENI", "AHMAD GOJALI", "DAMYATI", "DEDE SULASTRI", "M NASRUDIN", "WAWAN GUNAWAN", "KOMARIAH", "SITI MARIAM", "IMAS SUNDARI", "IIS SUSILAWATI", "TAMIN", "SAIFUL BAHRI", "EKA SRI YUNIAWATI SP"],​"HERMAN SUHERMAN": ["MUKTAR", "ASIPAH", "ADILA FADHILAH", "ALI SOBIRIN", "MUHAMAD RIZAL", "MUHAMAD IKROB", "JUNENI", "MADSURO", "AJAT SUDRAJAT", "M RIFAT SY", "SANTANI", "MUHAMAD WAWI", "WASEH", "AHMAD RIFAI", "ADITTIA", "SAEPUL ANWAR", "NADA MARLIA  KENCANA", "AGUS SOLEH", "ETI", "EVI MUBAROK", "SITI SUIRAT", "RICKI NURDIANSAH", "AHMAD SUKENDAR", "KAMSARUDIN", "AKHMAD", "M JUMRONI", "RIFKI FIRMANSYAH S PD", "UDIN", "MUHLISIN", "IWAN ADE HERNAWAN", "MASITOH", "SAHRUL ROMADON", "IJAT SUDRAJAT", "ROHILAH", "MUNIR", "SAMAH", "M NUH", "SANIAH", "AYU MULYATI", "EVA MULYAWATI", "SUCI AFRIANTI", "SUWARTA", "AHMAD MUYASAR", "SURTI", "SYAIR RUSTANDI", "ROISYUL UMAM", "IIS ANDRIANI", "SUPRIYANTO", "UDIN SN", "DEWI ARIANI", "SUMARNA", "KHUMAEDI", "BARI", "SARNATA", "ASMAR", "ADE FAJARUDIN", "KHOTIMAH", "SUKANDI", "YUYUN", "SAEFUL", "AAN SAHEFI", "JAJANG", "SITI AISAH", "MUTIARA", "SITI MARIAH", "DIAN HAERANI SPD", "YOGI PERMANA", "ARKAMAN", "AAN", "HALILI", "HERMAN", "GUNAWAN", "AGUS SOPIAN", "AGUNG KURNIAWAN"],​"MUHAMMAD FIKRI MUZAKKIY": ["BATIWURI HANDAYANI", "ARIS MUNANDAR", "RINA MARLINA", "DERRY HARISMAYA", "JAENUDIN", "IING BATARA", "SYARONI", "UWAISUL QURNI SE", "SAWIYAH", "SUPARDI", "FUZZY RACHMAWATI", "WATI PURWATI", "DIKY MAULANA", "JASMANI", "AGUNG FIRDAUS", "MIFTAHUDIN", "AWALUDDIN FATAH YASIN", "ADILLA TABITHA PUTRI", "KURTUBI", "RAMADAN", "JUBAERI", "FAISAL", "RIZKI WAHYUDI", "IMRON ROSADI", "BASAR", "SUPRIATIN", "MADROJI", "UUS", "SRI PUJI ASTUTI", "PHATAN AHMAD ABDILLAH", "SARI'AH", "MUHIPAL", "NIZAR LIMA HADI", "MOCH SAHRUDIN", "ASEP HERMAWAN SE", "RIZKY SUDRAJAT SE", "ELY NURLAELY", "ABAS", "MAMAN ABDURAHMAN", "SELVIA RAHMA HUZAMI", "YANI TUBIANTINI SPD MM", "RUDI PRIYATNA", "LIA ROHAENI", "AFRIADI", "SUMYATI", "AGUS SETIAWAN", "ARIS SUTIAWAN", "ROHIMAH", "ROMI", "ENDANG SUTOMO", "SITI RAHAYU", "RIFKI HUSSEY", "MOH ROCHIMI", "WARSITA", "AEDI SUPRADIAGA", "MADIDI", "YOYO RUHYO", "MUHAMAD WAHYUDI", "SUNARYO", "ADHI SETIAWAN", "ASNAH WULANDARI", "ALIMAN", "MAS ADI EKA NUGRAHA SH", "EDI BORE KURNIAWAN", "ASEP", "BRIGICHA PRICILIA N R", "JUNED", "AAN ANDRIYANI", "SANDHI MAULANA ADHA", "AKHMAD HUPRONI", "HOIRUN NAASIHIN", "NILWAN SANTOSO", "HAERUDIN", "SANTIAN", "ANDRIANA", "SARIIN", "SUHANDI", "ADINDA VALCHA RUSTIANSYAH", "RAFIUDIN", "BAGUS SUDARWANTO", "MUHAMMAD ZAKKY LAZUARDI", "MUHAMMAD SAPTA MAULANA", "RAMA AULANURI"],​"MUHAMMAD NURDIN": ["ROSIDAH", "HENDI ARDIANSYAH", "SITI SURIAH", "WAHYU", "DODI ARDIANTO", "AMELIA", "MUHAMMAD MAULANA YUSUF", "UTAM", "ROHMAN EPE", "SAEPUL BAHRI", "SUKESIH", "TAUFIK PAJAR", "SOLEHUDIN", "ISMAIL KHODARUSSALAM", "ULUNG", "HUSIN", "SYARIFUDIN", "MUCHLIS ADHANI", "ARIS", "YAYAH", "MUNAWAROH", "RIKI SUBHI WAHID", "ILA", "SUPIAH", "WINA MAULIDA HAPSARI", "YAYAN NURYANI", "DEDY SRIYADI", "SITI MASITOH", "NURIPAN", "RUSDIYANTO", "IHAH TUNJIHAH", "SAEPUL", "SUHENDRA", "JUEBIH", "KHOIROTUNNASIHAH", "SUHERLAN", "ESIH", "SANURI", "M JUPRI", "PAHMINUDIN", "ASMARIYAH", "UCI", "AGUS KURNIAWAN", "JOHARI", "ROMA LANA", "IRMA SILVIATI S PD", "SUNTIKA", "UBAI", "ERVIN ROHMAN", "FITRI NURHIDAYAH", "YUMYATI", "MUHAMAD NASRUDIN", "NHORA EPA", "BUDIMAN BIN KASIB", "AGUS GUNAWAN", "MOHAMAD HAPID", "LEO", "SUJA I", "MAHDI", "SURYADI", "ROSTIANINGSIH", "ERIN JOHARIAH", "ROHAYATI", "SUPENDI", "DENI HIDAYAT", "MOH FERDIAN SAHROJI", "SUNAYAH", "SHINTA BULAN DYNI"],​"INDRA RIYANTO": ["LINA", "PERAWATI", "SAYUMAN", "ENCEP FATHUL MAHTUM", "RIZKI HAKIKI", "RUSMADI", "TUTI ALAWIYAH", "JUHENI", "SUPRANI", "EJA HERLIANA", "SALIM", "ALAM", "KUSNAWATI", "MA MUN", "BAHRUM SAG", "NURMI", "APIPA PURBA", "AGUNG ABDUN NAFI", "ANIS", "YAYAH", "SIMAN", "MUHAMAD SLAMET", "TB IRFAN FAHMI", "ALPIDI YANI", "AJI AMARUL ROUF", "JARIAN", "HELMI", "AHMAD ALI ROSADIANA", "SAPARUDIN", "MAULANA RIFAI", "BAIHAKI", "TONI AZHARI", "SUHERI", "SULAEMI", "BUDI SUPRIYANTO", "NURAENI", "HADI", "SUTINAH", "ROHMAH", "ERMA IMASLIA", "MISRODIN", "AGUS SWIGUNA", "NURYATI", "CHANDRA", "KUSMIYATI", "IDO ITARNO", "MAULANA IQBAL", "NURUL HUDAWLAH", "HERLENI", "MUHAMAD SYAM URIP", "KAMBRAN", "JUNAH", "MARHETI", "ADE SETIAWAN", "NASRUDIN", "TIMAN", "MARSAN", "SAHRUDIN", "MUHAMAD HIDAYATULLAH", "JAJA SUHELI", "IDA NURHASANAH"]   };
+const dataInput = {
+    "ABDULLAH": ["AHMAD HASANUDIN S AP", "SITI MUMTAHANAH", "JUNIADI", "DEVIANA AYUNINGSIH", "ATIH YULIAWATI", "HAMID", "KHOTIBUL UMAM", "DARMA", "MUHDI", "RIJAL", "WIDODO", "YAYAN HERNAYANTI", "ENDANG HAIRIL ANWAR", "IRWAN AGUSTIAN", "ILA NAILA", "TRESNA PERMANA", "SUNARDI", "FERA AGUSTIN", "DINA DAINAH", "NINDIAN DWIGUNA", "SUHA", "JALIS", "SODIKIN", "ENDANG", "AHMAD APENDI", "INDRA", "JAKARI", "HIPNI", "AGUS SALIM", "NINA KHAIRUNISA", "A SADELI", "ROHEDI", "RIDWAN", "LUKMANUL HAKIM", "BETI", "MADHAWI", "NANI MULYANI", "RANTO", "MUHAMAD LINDU", "MAMAN SURYAMAN", "BASRI", "ABDUL SYUKUR", "ADIE LESMANA", "SALIMIN", "MUCHLISIN", "SITI HAWA", "JUITA NENGSIH", "YANTO", "PEBRIAN", "EKA IRMAWATI", "MAMAT", "A SUTISNA", "NATINI", "JUNENGSIH", "JAJA PERMANA", "HERI KUSWANTO", "ANTON", "AMNAH", "AGUS BUDIAWAN", "M RIFAI", "SUTIHAT", "SUHENDRA SALIM", "AMSANAH", "ADE MUKHTAR", "IWAN SETIAWAN"],
+    "APUD MAHPUDIN": ["KISWANTO", "SUJANA", "AHMAD BAEDOWI", "JOHARIYAH", "KHAMSIN", "ALEX", "MUHAMAD SAHRUL", "AHMAD SOPIAN", "MUTO I", "MALA NOVITA SARI", "ROYANI", "HALIMI", "MAD ZAIDIN", "NORMAN SUANDI", "ARIF MAULANA", "WAHYUDIN", "MAHPUD", "JAMJURI", "AHMAD MAHMUDI", "AMBARI", "IMAS MASTURIAH", "YOGA EKA PRADHITA", "RENDI SUDRAJAT TULLAH", "SUPIANA", "SUTISNA", "MARJUK", "MARIA ULFAH", "JAENI", "ROSLIYANTI", "JEMI HUJAEMI", "NINA MARINA", "MUKRI", "M MAHDI", "SUHAELAH", "SAPRUDIN", "SAEPUDIN", "YOGI MUFTI ALI", "HILMAN", "NURWAHYU", "MUHAMAD IQBAL", "SOMA", "ARIF PATUROHMAN", "MILA ANJANI", "DIAN KHAERANI", "ROSMINI", "JOHAN", "ALI SOBRI", "ROISAH", "MULYANI", "PIAN SEPTIANDI", "EVI HANAPI", "INCE", "SUDRAJAT", "SOPIAH", "NURJEN", "RINDI SALIA", "YOGA PANGESTU", "AHMAD FATONI", "ADE HUSAENI", "AHMAD GOJALI", "DAMYATI", "DEDE SULASTRI", "M NASRUDIN", "WAWAN GUNAWAN", "KOMARIAH", "SITI MARIAM", "IMAS SUNDARI", "IIS SUSILAWATI", "TAMIN", "SAIFUL BAHRI", "EKA SRI YUNIAWATI SP"],
+    "HERMAN SUHERMAN": ["MUKTAR", "ASIPAH", "ADILA FADHILAH", "ALI SOBIRIN", "MUHAMAD RIZAL", "MUHAMAD IKROB", "JUNENI", "MADSURO", "AJAT SUDRAJAT", "M RIFAT SY", "SANTANI", "MUHAMAD WAWI", "WASEH", "AHMAD RIFAI", "ADITTIA", "SAEPUL ANWAR", "NADA MARLIA KENCANA", "AGUS SOLEH", "ETI", "EVI MUBAROK", "SITI SUIRAT", "RICKI NURDIANSAH", "AHMAD SUKENDAR", "KAMSARUDIN", "AKHMAD", "M JUMRONI", "RIFKI FIRMANSYAH S PD", "UDIN", "MUHLISIN", "IWAN ADE HERNAWAN", "MASITOH", "SAHRUL ROMADON", "IJAT SUDRAJAT", "ROHILAH", "MUNIR", "SAMAH", "M NUH", "SANIAH", "AYU MULYATI", "EVA MULYAWATI", "SUCI AFRIANTI", "SUWARTA", "AHMAD MUYASAR", "SURTI", "SYAIR RUSTANDI", "ROISYUL UMAM", "IIS ANDRIANI", "SUPRIYANTO", "UDIN SN", "DEWI ARIANI", "SUMARNA", "KHUMAEDI", "BARI", "SARNATA", "ASMAR", "ADE FAJARUDIN", "KHOTIMAH", "SUKANDI", "YUYUN", "SAEFUL", "AAN SAHEFI", "JAJANG", "SITI AISAH", "MUTIARA", "SITI MARIAH", "DIAN HAERANI SPD", "YOGI PERMANA", "ARKAMAN", "AAN", "HALILI", "HERMAN", "GUNAWAN", "AGUS SOPIAN", "AGUNG KURNIAWAN"],
+    "MUHAMMAD FIKRI MUZAKKIY": ["BATIWURI HANDAYANI", "ARIS MUNANDAR", "RINA MARLINA", "DERRY HARISMAYA", "JAENUDIN", "IING BATARA", "SYARONI", "UWAISUL QURNI SE", "SAWIYAH", "SUPARDI", "FUZZY RACHMAWATI", "WATI PURWATI", "DIKY MAULANA", "JASMANI", "AGUNG FIRDAUS", "MIFTAHUDIN", "AWALUDDIN FATAH YASIN", "ADILLA TABITHA PUTRI", "KURTUBI", "RAMADAN", "JUBAERI", "FAISAL", "RIZKI WAHYUDI", "IMRON ROSADI", "BASAR", "SUPRIATIN", "MADROJI", "UUS", "SRI PUJI ASTUTI", "PHATAN AHMAD ABDILLAH", "SARI'AH", "MUHIPAL", "NIZAR LIMA HADI", "MOCH SAHRUDIN", "ASEP HERMAWAN SE", "RIZKY SUDRAJAT SE", "ELY NURLAELY", "ABAS", "MAMAN ABDURAHMAN", "SELVIA RAHMA HUZAMI", "YANI TUBIANTINI SPD MM", "RUDI PRIYATNA", "LIA ROHAENI", "AFRIADI", "SUMYATI", "AGUS SETIAWAN", "ARIS SUTIAWAN", "ROHIMAH", "ROMI", "ENDANG SUTOMO", "SITI RAHAYU", "RIFKI HUSSEY", "MOH ROCHIMI", "WARSITA", "AEDI SUPRADIAGA", "MADIDI", "YOYO RUHYO", "MUHAMAD WAHYUDI", "SUNARYO", "ADHI SETIAWAN", "ASNAH WULANDARI", "ALIMAN", "MAS ADI EKA NUGRAHA SH", "EDI BORE KURNIAWAN", "ASEP", "BRIGICHA PRICILIA N R", "JUNED", "AAN ANDRIYANI", "SANDHI MAULANA ADHA", "AKHMAD HUPRONI", "HOIRUN NAASIHIN", "NILWAN SANTOSO", "HAERUDIN", "SANTIAN", "ANDRIANA", "SARIIN", "SUHANDI", "ADINDA VALCHA RUSTIANSYAH", "RAFIUDIN", "BAGUS SUDARWANTO", "MUHAMMAD ZAKKY LAZUARDI", "MUHAMMAD SAPTA MAULANA", "RAMA AULANURI"],
+    "MUHAMMAD NURDIN": ["ROSIDAH", "HENDI ARDIANSYAH", "SITI SURIAH", "WAHYU", "DODI ARDIANTO", "AMELIA", "MUHAMMAD MAULANA YUSUF", "UTAM", "ROHMAN EPE", "SAEPUL BAHRI", "SUKESIH", "TAUFIK PAJAR", "SOLEHUDIN", "ISMAIL KHODARUSSALAM", "ULUNG", "HUSIN", "SYARIFUDIN", "MUCHLIS ADHANI", "ARIS", "YAYAH", "MUNAWAROH", "RIKI SUBHI WAHID", "ILA", "SUPIAH", "WINA MAULIDA HAPSARI", "YAYAN NURYANI", "DEDY SRIYADI", "SITI MASITOH", "NURIPAN", "RUSDIYANTO", "IHAH TUNJIHAH", "SAEPUL", "SUHENDRA", "JUEBIH", "KHOIROTUNNASIHAH", "SUHERLAN", "ESIH", "SANURI", "M JUPRI", "PAHMINUDIN", "ASMARIYAH", "UCI", "AGUS KURNIAWAN", "JOHARI", "ROMA LANA", "IRMA SILVIATI S PD", "SUNTIKA", "UBAI", "ERVIN ROHMAN", "FITRI NURHIDAYAH", "YUMYATI", "MUHAMAD NASRUDIN", "NHORA EPA", "BUDIMAN BIN KASIB", "AGUS GUNAWAN", "MOHAMAD HAPID", "LEO", "SUJA I", "MAHDI", "SURYADI", "ROSTIANINGSIH", "ERIN JOHARIAH", "ROHAYATI", "SUPENDI", "DENI HIDAYAT", "MOH FERDIAN SAHROJI", "SUNAYAH", "SHINTA BULAN DYNI"],
+    "INDRA RIYANTO": ["LINA", "PERAWATI", "SAYUMAN", "ENCEP FATHUL MAHTUM", "RIZKI HAKIKI", "RUSMADI", "TUTI ALAWIYAH", "JUHENI", "SUPRANI", "EJA HERLIANA", "SALIM", "ALAM", "KUSNAWATI", "MA MUN", "BAHRUM SAG", "NURMI", "APIPA PURBA", "AGUNG ABDUN NAFI", "ANIS", "YAYAH", "SIMAN", "MUHAMAD SLAMET", "TB IRFAN FAHMI", "ALPIDI YANI", "AJI AMARUL ROUF", "JARIAN", "HELMI", "AHMAD ALI ROSADIANA", "SAPARUDIN", "MAULANA RIFAI", "BAIHAKI", "TONI AZHARI", "SUHERI", "SULAEMI", "BUDI SUPRIYANTO", "NURAENI", "HADI", "SUTINAH", "ROHMAH", "ERMA IMASLIA", "MISRODIN", "AGUS SWIGUNA", "NURYATI", "CHANDRA", "KUSMIYATI", "IDO ITARNO", "MAULANA IQBAL", "NURUL HUDAWLAH", "HERLENI", "MUHAMAD SYAM URIP", "KAMBRAN", "JUNAH", "MARHETI", "ADE SETIAWAN", "NASRUDIN", "TIMAN", "MARSAN", "SAHRUDIN", "MUHAMAD HIDAYATULLAH", "JAJA SUHELI", "IDA NURHASANAH"]
+};
 
         let userAktif = null;
 
@@ -658,79 +667,69 @@
         // ==========================================================================
         // PERBAIKAN UTAMA: FUNGSI DOWNLOAD EXCEL DUA SHEET (SUDAH & BELUM INPUT)
         // ==========================================================================
-        function downloadExcel() {
-            let dataSudahInputExcel = [];
-            let nasabahSudahInputNamaOnly = [];
-            let indexSudah = 1;
+function downloadExcel() {
+    let dataSudahInputExcel = [];
+    let nasabahSudahInputNamaOnly = [];
+    let indexSudah = 1;
 
-            // 1. Ambil data dari tabel online Pak Salman yang bertanda Checkbox (Terpilih)
-            const checkboxes = document.querySelectorAll('.chk-nasabah:checked');
-            
-            if (globalDatabaseSnapshot && checkboxes.length > 0) {
-                checkboxes.forEach(cb => {
-                    let key = cb.value;
-                    let item = globalDatabaseSnapshot[key];
-                    if (item) {
-                        nasabahSudahInputNamaOnly.push(item.namaCustomer);
-                        dataSudahInputExcel.push({
-                            "NO": indexSudah++,
-                            "NAMA CUSTOMER": item.namaCustomer,
-                            "REMEDIAL / MK2": item.remedialMk2,
-                            "TGL JB": item.tglJb,
-                            "DLQ": item.dlq,
-                            "DETAIL KASUS (ANSUS)": item.ansus,
-                            "PREDIKSI": item.progresDocking,
-                            "INPUT OLEH": item.inputBy || "Karyawan"
-                        });
-                    }
+    const checkboxes = document.querySelectorAll('.chk-nasabah:checked');
+    
+    if (globalDatabaseSnapshot && checkboxes.length > 0) {
+        checkboxes.forEach(cb => {
+            let key = cb.value;
+            let item = globalDatabaseSnapshot[key];
+            if (item) {
+                nasabahSudahInputNamaOnly.push(item.namaCustomer);
+                dataSudahInputExcel.push({
+                    "NO": indexSudah++,
+                    "NAMA CUSTOMER": item.namaCustomer,
+                    "REMEDIAL / MK2": item.remedialMk2,
+                    "TGL JB": item.tglJb,
+                    "DLQ": item.dlq,
+                    "DETAIL KASUS (ANSUS)": item.ansus,
+                    "PREDIKSI": item.progresDocking,
+                    "INPUT OLEH": item.inputBy || "Karyawan"
                 });
             }
+        });
+    }
 
-            // 2. Cari nasabah yang tidak terdaftar di daftar checklist data masuk (Belum Input)
-            let dataBelumInputExcel = [];
-            let indexBelum = 1;
+    let dataBelumInputExcel = [];
+    let indexBelum = 1;
 
-            Object.keys(dataInput).forEach(kolektor => {
-                dataInput[kolektor].forEach(nasabah => {
-                    if (!nasabahSudahInputNamaOnly.includes(nasabah)) {
-                        dataBelumInputExcel.push({
-                            "NO": indexBelum++,
-                            "NAMA CUSTOMER": nasabah,
-                            "REMEDIAL / MK2": iolektor = kolektor,
-                            "STATUS KETERANGAN": "BELUM INPUT DATA DOCKING"
-                        });
-                    }
+    Object.keys(dataInput).forEach(kolektor => {
+        dataInput[kolektor].forEach(nasabah => {
+            if (!nasabahSudahInputNamaOnly.includes(nasabah)) {
+                dataBelumInputExcel.push({
+                    "NO": indexBelum++,
+                    "NAMA CUSTOMER": nasabah,
+                    "REMEDIAL / MK2": kolektor,
+                    "STATUS KETERANGAN": "BELUM INPUT DATA DOCKING"
                 });
-            });
-
-            // 3. Validasi apakah ada data yang siap diunduh
-            if (dataSudahInputExcel.length === 0 && dataBelumInputExcel.length === 0) {
-                alert("Tidak ada data rekapitulasi yang dapat diekspor saat ini.");
-                return;
             }
+        });
+    });
 
-            // 4. Proses pembuatan file Excel Multi-Sheet
-            const workbook = XLSX.utils.book_new();
+    if (dataSudahInputExcel.length === 0 && dataBelumInputExcel.length === 0) {
+        alert("Tidak ada data rekapitulasi yang dapat diekspor saat ini.");
+        return;
+    }
 
-            // Masukkan Sheet 1 jika ada data nasabah yang sudah di-input
-            if (dataSudahInputExcel.length > 0) {
-                const worksheetSudah = XLSX.utils.json_to_sheet(dataSudahInputExcel);
-                XLSX.utils.book_append_sheet(workbook, worksheetSudah, "Sudah Input");
-            } else {
-                // Alternatif lembar kosong agar file tidak error saat data database kosong
-                const worksheetKosong = XLSX.utils.json_to_sheet([{"KETERANGAN": "Belum ada data masuk"}]);
-                XLSX.utils.book_append_sheet(workbook, worksheetKosong, "Sudah Input");
-            }
+    const workbook = XLSX.utils.book_new();
 
-            // Masukkan Sheet 2 jika ada nasabah sisa yang belum di-input
-            if (dataBelumInputExcel.length > 0) {
-                const worksheetBelum = XLSX.utils.json_to_sheet(dataBelumInputExcel);
-                XLSX.utils.book_append_sheet(workbook, worksheetBelum, "Belum Input");
-            }
+    if (dataSudahInputExcel.length > 0) {
+        const worksheetSudah = XLSX.utils.json_to_sheet(dataSudahInputExcel);
+        XLSX.utils.book_append_sheet(workbook, worksheetSudah, "Sudah Input");
+    }
 
-            // Ekspor file Excel terpadu
-            XLSX.writeFile(workbook, "Rekap_Sistem_Ruang_Docking_Pusat.xlsx");
-        }
+    if (dataBelumInputExcel.length > 0) {
+        const worksheetBelum = XLSX.utils.json_to_sheet(dataBelumInputExcel);
+        XLSX.utils.book_append_sheet(workbook, worksheetBelum, "Belum Input");
+    }
+
+    XLSX.writeFile(workbook, "Rekap_Sistem_Ruang_Docking_Pusat.xlsx");
+}
+
     </script>
 </body>
 </html>
